@@ -1,0 +1,24 @@
+.cacheit-icon {
+  list-style-image: url("chrome://cacheit/skin/cacheit-icon.png");
+}
+.cacheit-icon-options {
+  list-style-image: url("chrome://cacheit/skin/cacheit-icon-options.png");
+}
+.cacheit-icon-coral {
+  list-style-image: url("chrome://cacheit/skin/coral-icon.png");
+}
+.cacheit-icon-google {
+  list-style-image: url("chrome://cacheit/skin/google-icon.png");
+}
+.cacheit-icon-wayback {
+  list-style-image: url("chrome://cacheit/skin/wayback-icon.png");
+}
+.cacheit-icon-blekko {
+  list-style-image: url("chrome://cacheit/skin/blekko-icon.png");
+}
+.cacheit-icon-bing {
+  list-style-image: url("chrome://cacheit/skin/bing-icon.png");
+}
+.cacheit-icon-webcite {
+  list-style-image: url("chrome://cacheit/skin/webcite-icon.png");
+}

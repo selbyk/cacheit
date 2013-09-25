@@ -1,4 +1,0 @@
-cacheit
-=======
-
-Firefox extension

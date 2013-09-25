@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!--<!DOCTYPE dialog SYSTEM "chrome://popupcount/locale/popupcountSettings.dtd">-->
+
+<dialog title="CacheIt! - Options"
+	id="cacheitoptionswindow"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept, cancel"
+	onload="cacheitSettings.onLoad();"
+	ondialogaccept="return cacheitSettings.onAccept();">
+	
+	<script type="application/x-javascript" src="chrome://cacheit/content/cacheitSettings.js"/>
+	
+	<tabbox>
+		<tabs>
+			<tab label="Display" id="general"/>
+			<tab label="Loading" id="loadurl" />
+			<tab label="Shortcut" id="shortcut" />
+		</tabs>
+
+		<tabpanels>	
+			<tabpanel id="display">
+				<groupbox>
+					<caption label="Menus"/>
+					<checkbox label="Tool menu" id="showtoolbar"/>
+					<checkbox label="Context menu" id="showcontext"/>
+					<!--<checkbox label="Statusbar" id="showstatusbar"/>-->
+				</groupbox>
+				<groupbox>
+					<caption label="Providers"/>
+					<checkbox label="Coral CDN" id="showcoral"/>
+					<checkbox label="Google" id="showgoogle"/>
+					<checkbox label="Bing" id="showbing"/>
+					<checkbox label="Blekko" id="showblekko"/>
+					<checkbox label="The Way-Back Machine" id="showwayback"/>
+					<checkbox label="WebCite" id="showwebcite"/>
+				</groupbox>
+			</tabpanel>
+			
+			<tabpanel id="loadurl">
+				<groupbox>
+					<caption label="Left Click"/>
+					<radiogroup id="leftclick">
+						<radio label="Current tab" value="current"/>
+						<radio label="New tab" value="newtab"/>
+						<radio label="New tab (in background)" value="newtabbg"/>
+						<radio label="New window" value="newwindow"/>
+						<radio label="Copy to clipboard" value="copy"/>
+					</radiogroup>
+				</groupbox>
+				<groupbox>
+					<caption label="Middle click"/>
+					<radiogroup id="middleclick">
+						<radio label="Current tab" value="current"/>
+						<radio label="New tab" value="newtab"/>
+						<radio label="New tab (in background)" value="newtabbg"/>
+						<radio label="New window" value="newwindow"/>
+						<radio label="Copy to clipboard" value="copy"/>
+					</radiogroup>
+				</groupbox>
+				<groupbox>
+					<caption label="Right click"/>
+					<radiogroup id="rightclick">
+						<radio label="Current tab" value="current"/>
+						<radio label="New tab" value="newtab"/>
+						<radio label="New tab (in background)" value="newtabbg"/>
+						<radio label="New window" value="newwindow"/>
+						<radio label="Copy to clipboard" value="copy"/>
+					</radiogroup>
+				</groupbox>
+			</tabpanel>
+			
+			<tabpanel id="shortcut">
+				<checkbox label="Shortcut enabled" id="shortcutenabled" onclick="document.getElementById('defaultprovider').disabled = this.checked; document.getElementById('shortcutload').disabled = this.checked; getTopWindow().document.getElementById('cacheit-google').disabled = this.checked; getTopWindow().document.getElementById('cacheit-key').disabled = this.checked" />
+				<groupbox>
+					<caption label="Provider" />
+					<radiogroup id="defaultprovider">
+						<radio label="Coral CDN" value="coral"/>
+						<radio label="Google" value="google"/>
+						<radio label="Bing" value="bing"/>
+						<radio label="Blekko" value="blekko"/>
+						<radio label="The Way-Back Machine" value="wayback"/>
+						<radio label="WebCite" value="webcite"/>
+					</radiogroup>
+				</groupbox>
+				<groupbox>
+					<caption label="Loading"/>
+					<radiogroup id="shortcutload">
+						<radio label="Current tab" value="current"/>
+						<radio label="New tab (Default)" value="newtab"/>
+						<radio label="New tab (in background)" value="newtabbg"/>
+						<radio label="New window" value="newwindow"/>
+						<radio label="Copy to clipboard" value="copy"/>
+					</radiogroup>
+				</groupbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+	
+</dialog>
